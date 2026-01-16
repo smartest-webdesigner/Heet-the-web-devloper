@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock, Paper, Scissors</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #fffacd; /* Light yellow (Lemon Chiffon) */
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+ 
+button1{
+background-color: green;
+}
+button2{
+background-color: red;
+}
+
+button3{
+background-color: blue;
+}
+
+
+
+button:nth-child(2) {
+  background-color: #ff6347; /* Tomato red for Rock */
+}
+
+button:nth-child(3) {
+  background-color: #3cb371; /* Medium sea green for Paper */
+}
+
+button:nth-child(4) {
+  background-color: #1e90ff; /* Dodger blue for Scissors */
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+  <button onclick="playGame('rock')">Rock</button>
+  <button onclick="playGame('paper')">Paper</button>
+  <button onclick="playGame('scissors')">Scissors</button>
+
+  <p id="result"></p>
+  <h2>Scoreboard</h2>
+  <p id="score">Wins: 0 | Losses: 0 | Draws: 0</p>
+
+es = 0;
+    let draws = 0;
+
+    function playGame(userChoice) {
+      const choices = ["rock", "paper", "scissors"];
+      const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+      let result;
+
+      if (userChoice === computerChoice) {
+        result = "It's a draw!";
+        draws++;
+      } else if (
+        (userChoice === "rock" && computerChoice === "scissors") ||
+        (userChoice === "paper" && computerChoice === "rock") ||
+        (userChoice === "scissors" && computerChoice === "paper")
+      ) {
+        result = "You win!";
+        wins++;
+      } else {
+        result = "You lose!";
+        losses++;
+      }
+
+         }
+  </script>
+</body></html>

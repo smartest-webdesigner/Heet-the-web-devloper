@@ -1,0 +1,117 @@
+<html>
+<head>
+<title>Shopping cart</title>
+</head>
+<body>
+<style>
+body{
+font-family: ink free;
+text-align: center;
+background-color:#fffacd;
+}
+h1{
+color:#ff6347;
+}
+.item {
+    background-color: #ffa07a;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+}
+.cart {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #aaf0d1;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+<h1>Welcome to Electronic Shop!</h1>
+<div class=".sale"><p><h2>SALE</p></div>
+<p color="#ff6347">Click the button to add an item to cart.</p>
+
+<div class ="item">
+
+<p>
+<img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/40-nc-alum-starlight-sport-band-starlight?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1694042114606" height="100"
+width="100"> watch =₹4999</p>
+<button onclick="addToCart('skating kit',4999)"> Add to Cart</button></div>
+
+<div class ="item">
+<p>
+<img src="https://www.lg.com/content/dam/channel/wcms/ph/images/tvs/50ut8000psb_aph_eacm_ph_c/gallery/large_01.jpg/_jcr_content/renditions/thum-1600x1062.jpeg" height="100"
+width="100">tv  =₹111999</p>
+<button onclick="addToCart('skating kit',111999)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://api.priceinkenya.com/media/143679/conversions/Apple-Iphone-17-Pro-Max-b-original.webp" height="100"
+width="100"> iphone 17 pro max =₹111599</p>
+<button onclick="addToCart('skating kit',111599)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNo1gOP6yjIdRxZRv8usJI2O_zfq7nAiRftA&s" height="100"
+width="100"> basketball  =₹499</p>
+<button onclick="addToCart('skating kit',499)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://www.brewingcricket.com/cdn/shop/files/IMG-8036.jpg?v=1750868582" height="100"
+width="100"> cricket kit =₹8999</p>
+<button onclick="addToCart('skating kit',8999)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Football_Pallo_valmiina-cropped.jpg" height="100"
+width="100"> football =₹699</p>
+<button onclick="addToCart('skating kit',699)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://rukminim2.flixcart.com/image/480/640/koudfgw0/marble-goti/c/z/a/playing-glass-marbles-marble-goti-100-pcs-d-mega-mart-original-imag37qrqdsaq4f9.jpeg?q=90" height="100"
+width="100"> marbles  =₹199</p>
+<button onclick="addToCart('skating kit',199)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://m.media-amazon.com/images/I/81EK9pbaHML.jpg" height="100"
+width="100">  tennis balls =₹1199</p>
+<button onclick="addToCart('skating kit',1199)"> Add to Cart</button>
+</div>
+<div class ="item">
+<p>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8xMf5hj420FyvZlrnzgQmo1n4F76iKRLKA&s" height="100"
+width="100">  tennis balls =₹2199</p>
+<button onclick="addToCart('skating kit',2199)"> Add to Cart</button>
+</div>
+
+<div class="cart">
+    <h3>Shopping Cart</h3>
+    <p id="cartList">Cart is empty</p>
+    <h3>Total: $<span id="totalAmount">0</span></h3>
+</botton>
+</div>
+
+<script>
+let totalAmount = 0;
+function addToCart(item, price) {
+    let cart = document.getElementById("cartList");
+    let total = document.getElementById("totalAmount");
+    // Update cart items
+    if (cart.innerHTML === "Cart is empty") {
+        cart.innerHTML = item;
+    } else {
+        cart.innerHTML += ", " + item;
+    }
+    // Update total amount
+    totalAmount += price;
+    total.innerHTML = totalAmount;
+}
+</script>
+</body>
+</html>
