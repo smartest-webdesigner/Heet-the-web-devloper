@@ -1,0 +1,218 @@
+<html>
+<head>
+    <title>PGKM Web Studio Presentation</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
+      color: #ffacd;
+    }
+
+    .slide {
+      display: none;
+      height: 100vh;
+      padding: 60px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      max-width: 900px;
+      margin: 0 auto 20px;
+    }
+
+    .visual {
+      font-size: 6rem;
+      margin: 30px 0;
+    }
+
+    .pillars {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 40px;
+    }
+
+    .pillar {
+      background: #bbdefb;
+      padding: 20px;
+      border-radius: 15px;
+      width: 25%;
+      font-size: 1.2rem;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 1rem;
+      margin: 0 10px;
+      border: none;
+      border-radius: 8px;
+      background: #1976d2;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0d47a1;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-size: 2rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1: The Hook -->
+  <div class="slide active">
+    <h1>Is Coding a Magic Trick? ✨</h1>
+    <div class="visual">❓</div>
+    <p> 
+
+ Hello everyone! Welcome to the <strong>PGKM Web Studio</strong>.
+      Most people think websites appear out of thin air, but today we’ll
+      show you the <strong>magic behind your favorite apps</strong>.
+      <br><br>
+      We are the <strong>architects of the digital world!</strong>
+    </p>
+  </div>
+
+  <!-- Slide 2: The Three Pillars -->
+  <div class="slide">
+    <h1>The Three Pillars of Web Design</h1>
+    <p>A website is like a house. Every part has a job.</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        🧱 <strong>HTML</strong><br>
+        The structure & skeleton
+      </div>
+      <div class="pillar">
+        🎨 <strong>CSS</strong><br>
+        Paint, style & beauty
+      </div>
+      <div class="pillar">
+        ⚡ <strong>JavaScript</strong><br>
+        Brain & interaction
+      </div>
+    </div>
+
+    <p style="margin-top:30px;">
+      Without JavaScript, your <strong>Buy</strong> button is just a pretty picture!
+    </p>
+  </div>
+
+  <!-- Slide 3: Our Creations -->
+  <div class="slide">
+    <h1>Our Creations 🚀</h1>
+    <p>
+      Don’t just take our word for it—look at our laptop!
+      We built a <strong>Shopping Cart</strong> and a
+      <strong>Guessing Game</strong> using only code.
+    </p>
+
+    <div class="visual">💻🛒🎯</div>
+
+    <p>
+      No website builders.<br>
+      <strong>Every line was written by us.</strong>
+    </p>
+  </div>
+
+  <!-- Slide 4: Careers -->
+  <div class="slide">
+    <h1>The Future Starts Here 🌍</h1>
+    <p>
+      Web development is the gateway to the future.
+      From AI and space exploration to games and banking,
+      it all starts with <strong>code</strong>.
+    </p>
+
+    <div class="logos">
+      🚀 NASA
+      🎬 Netflix
+      🔍 Google
+    </div>
+
+    <p style="margin-top:30px;">
+      What starts as a hobby can become a <strong>global career</strong>.
+    </p>
+  </div>
+
+  <!-- Slide 5: Call to Action -->
+  <div class="slide">
+    <h1>The Fun Zone 🎉</h1>
+    <p>
+      Before you leave, come visit our <strong>Fun Zone</strong>!
+    </p>
+
+    <div class="visual">📸 🔢</div>
+
+    <p>
+      Take a photo in our <strong>Live Browser Booth</strong><br>
+      and create a <strong>binary bracelet</strong> of your name!
+      <br><br>
+      <strong>Thanks for visiting PGKM!</strong>
+    </p>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button onclick="prevSlide()">⬅ Previous</button>
+    <button onclick="nextSlide()">Next ➡</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slides[index].classList.add("active");
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
+    });
+  </script>
+
+</body>
+</html>
