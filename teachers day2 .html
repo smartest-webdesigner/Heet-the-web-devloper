@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Teachers' Day</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #6a5af9);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Floating Decorations */
+        .circle {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.25;
+            z-index: -1;
+        }
+
+        .circle1 {
+            width: 250px;
+            height: 250px;
+            background: #ffd700;
+            top: -80px;
+            left: -80px;
+        }
+
+        .circle2 {
+            width: 300px;
+            height: 300px;
+            background: #00ffff;
+            bottom: -100px;
+            right: -100px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+
+        .emoji {
+            font-size: 70px;
+            animation: bounce 2s infinite;
+        }
+
+        header h1 {
+            font-size: 55px;
+            margin: 15px 0;
+            background: linear-gradient(90deg, #fff700, #ffffff, #00ffff);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        header p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Welcome Card */
+        .welcome {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            margin-bottom: 35px;
+        }
+
+        .welcome h2 {
+            font-size: 35px;
+            color: #fff700;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+            transition: 0.4s;
+            color: #222;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-12px) scale(1.03);
+        }
+
+        .card .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .card1 {
+            background: linear-gradient(135deg, #ffd86f, #fc6262);
+        }
+
+        .card2 {
+            background: linear-gradient(135deg, #84fab0, #8fd3f4);
+        }
+
+        .card3 {
+            background: linear-gradient(135deg, #c471f5, #fa71cd);
+        }
+
+        /* Thank You Section */
+        .thankyou {
+            background: white;
+            color: #333;
+            padding: 45px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+            margin-bottom: 40px;
+        }
+
+        .thankyou h2 {
+            font-size: 38px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .thankyou p {
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        .heart {
+            font-size: 50px;
+            margin-top: 20px;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        /* Quote */
+        .quote {
+            text-align: center;
+            padding: 35px 20px;
+            margin-bottom: 40px;
+        }
+
+        .quote p {
+            font-size: 27px;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        .quote span {
+            display: block;
+            margin-top: 12px;
+            color: #fff700;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0,0,0,0.25);
+            font-size: 16px;
+        }
+
+        footer span {
+            color: #fff700;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 800px) {
+
+            header h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .welcome,
+            .thankyou {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Decorative Circles -->
+    <div class="circle circle1"></div>
+    <div class="circle circle2"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="emoji">👩‍🏫📚🍎</div>
+
+        <h1>Happy Teachers' Day!</h1>
+
+        <p>
+            Celebrating the wonderful teachers who inspire us,
+            guide us, and help us become the best version of ourselves. 💖
+        </p>
+    </header>
+
+
+    <main class="container">
+
+        <!-- Welcome -->
+        <section class="welcome">
+
+            <h2>🌟 Dear Teachers 🌟</h2>
+
+            <p>
+                A great teacher doesn't just teach lessons from books.
+                A great teacher inspires dreams, builds confidence,
+                encourages curiosity, and shows us the path to success.
+                Thank you for being a light that guides us every day!
+            </p>
+
+        </section>
+
+
+        <!-- Cards -->
+        <section class="cards">
+
+            <div class="card card1">
+                <div class="icon">💡</div>
+
+                <h3>You Inspire Us</h3>
+
+                <p>
+                    Your ideas and encouragement motivate us
+                    to learn, explore, and dream bigger.
+                </p>
+            </div>
+
+
+            <div class="card card2">
+                <div class="icon">❤️</div>
+
+                <h3>You Support Us</h3>
+
+                <p>
+                    Thank you for believing in us and helping us
+                    whenever we face challenges.
+                </p>
+            </div>
+
+
+            <div class="card card3">
+                <div class="icon">🌈</div>
+
+                <h3>You Guide Us</h3>
+
+                <p>
+                    Your knowledge and wisdom help us find
+                    the right direction for our future.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Thank You -->
+        <section class="thankyou">
+
+            <h2>🙏 Thank You, Teachers!</h2>
+
+            <p>
+                Dear Teachers,
+
+                <br><br>
+
+                Thank you for your patience, kindness, hard work,
+                and dedication. Every lesson you teach becomes
+                a small part of our future.
+
+                <br><br>
+
+                We may forget some lessons from our textbooks,
+                but we will always remember the teachers who
+                believed in us.
+
+                <br><br>
+
+                <strong>
+                    You don't just teach students —
+                    you help create the future! 🌍✨
+                </strong>
+            </p>
+
+            <div class="heart">❤️</div>
+
+        </section>
+
+
+        <!-- Quote -->
+        <section class="quote">
+
+            <p>
+                "A teacher takes a hand, opens a mind,
+                and touches a heart."
+            </p>
+
+            <span>— Happy Teachers' Day! 🌸</span>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        Made with ❤️ by <span>Heet Bafna</span>
+        | Teachers' Day 2026 🎓
+    </footer>
+
+</body>
+</html>
