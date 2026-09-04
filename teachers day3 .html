@@ -1,0 +1,807 @@
+None selected 
+
+Skip to content
+Using PGKM an ultra modern gurukul Mail with screen readers
+
+1 of 742
+(no subject)
+Inbox
+
+HEET BAFNA 7-B <heet_bafna_22709@pgkmschool.org>
+13:35 (1 minute ago)
+to me
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Teachers' Day | Our School</title>
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f5ff;
+            color: #222;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            padding: 18px 8%;
+            background: rgba(30, 20, 70, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #ffd166;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffd166;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 120px 20px 80px;
+
+            background:
+                radial-gradient(circle at top left, #8e7dff, transparent 35%),
+                radial-gradient(circle at bottom right, #ff77a9, transparent 35%),
+                linear-gradient(135deg, #21104d, #4a2378);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 10px 22px;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ffd166;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 19px;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #eee;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            margin: 8px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #ffd166;
+            color: #25114d;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+
+        /* =========================
+           FLOATING STARS
+        ========================= */
+
+        .stars {
+            font-size: 30px;
+            margin-top: 40px;
+            letter-spacing: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* =========================
+           SECTION TITLE
+        ========================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #3c2075;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 17px;
+        }
+
+        /* =========================
+           TEACHER CARDS
+        ========================= */
+
+        .teacher-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background: white;
+            padding: 35px 25px;
+            text-align: center;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(50,30,100,0.1);
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-card::before {
+            content: "";
+            position: absolute;
+            height: 6px;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(90deg,#7357ff,#ff6b9a);
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(50,30,100,0.2);
+        }
+
+        .teacher-icon {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg,#7357ff,#ff6b9a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 48px;
+            color: white;
+        }
+
+        .teacher-card h3 {
+            margin: 20px 0 10px;
+            color: #3c2075;
+            font-size: 24px;
+        }
+
+        .teacher-card p {
+            color: #666;
+        }
+
+        /* =========================
+           MESSAGE SECTION
+        ========================= */
+
+        .message-section {
+            background: linear-gradient(135deg,#eee8ff,#fff0f5);
+        }
+
+        .message-box {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(50,30,100,0.12);
+        }
+
+        .quote {
+            font-size: 30px;
+            color: #4b2687;
+            font-weight: bold;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .message-box p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* =========================
+           VALUES
+        ========================= */
+
+        .values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .value {
+            padding: 30px 20px;
+            text-align: center;
+            background: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .value:hover {
+            transform: scale(1.05);
+        }
+
+        .value-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .value h3 {
+            color: #3c2075;
+            margin-bottom: 8px;
+        }
+
+        .value p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* =========================
+           SPECIAL THANK YOU
+        ========================= */
+
+        .thankyou {
+            text-align: center;
+            color: white;
+
+            background:
+                radial-gradient(circle at center, #744cff, transparent 50%),
+                linear-gradient(135deg,#25114d,#170a32);
+        }
+
+        .thankyou h2 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .thankyou p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .heart {
+            font-size: 60px;
+            margin-top: 30px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #120824;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer span {
+            color: #ffd166;
+        }
+
+        /* =========================
+           ANIMATIONS
+        ========================= */
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes heartbeat {
+
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .teacher-container {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .values {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 90vh;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .teacher-container,
+            .values {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .message-box {
+                padding: 30px 20px;
+            }
+
+            .quote {
+                font-size: 22px;
+            }
+
+            .thankyou h2 {
+                font-size: 38px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🎓 <span>Teachers'</span> Day
+            </div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#message">Message</a></li>
+                <li><a href="#thankyou">Thank You</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🌸 Celebrating Our Wonderful Teachers 🌸
+            </div>
+
+            <h1>
+                Happy <span>Teachers' Day!</span>
+            </h1>
+
+            <h2>
+                To the mentors who light the path of our future
+            </h2>
+
+            <p>
+                Teachers inspire us to learn, encourage us to dream,
+                and guide us toward a brighter future. Today,
+                we celebrate their dedication, patience and wisdom.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#message" class="btn btn-primary">
+                    💜 Our Message
+                </a>
+
+                <a href="#teachers" class="btn btn-secondary">
+                    👩‍🏫 Meet Our Teachers
+                </a>
+
+            </div>
+
+            <div class="stars">
+                ⭐ ✨ ⭐
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEACHERS
+    ========================== -->
+
+    <section id="teachers">
+
+        <div class="section-title">
+
+            <h2>Our Amazing Teachers</h2>
+
+            <p>
+                Every teacher leaves a lasting mark on our lives.
+            </p>
+
+        </div>
+
+
+        <div class="teacher-container">
+
+            <div class="teacher-card">
+
+                <div class="teacher-icon">
+                    👩‍🏫
+                </div>
+
+                <h3>The Guide - Urmi Mam</h3>
+
+                <p>
+                    Always ready to guide us and help us
+                    discover our potential.
+                </p>
+
+            </div>
+
+
+            <div class="teacher-card">
+
+                <div class="teacher-icon">
+                    👨‍🏫
+                </div>
+
+                <h3>The Mentor- Priyanka .W</h3>
+
+                <p>
+                    Encourages us to believe in ourselves
+                    and never give up.
+                </p>
+
+            </div>
+
+
+            <div class="teacher-card">
+
+                <div class="teacher-icon">
+                    📖
+                </div>
+
+                <h3>The best Educator- Arya mam </h3>
+
+                <p>
+                    Makes learning interesting and turns
+                    knowledge into opportunity.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MESSAGE
+    ========================== -->
+
+    <section class="message-section" id="message">
+
+        <div class="section-title">
+
+            <h2>A Message From Students</h2>
+
+        </div>
+
+        <div class="message-box">
+
+            <div class="quote">
+                “A teacher plants the seeds of knowledge
+                that grow forever.”
+            </div>
+
+            <p>
+                Dear Teachers, we sincerely thank you for
+                everything you do for us. Your lessons go
+                beyond books and classrooms. You teach us
+                confidence, kindness, discipline and the
+                courage to chase our dreams.
+            </p>
+
+            <br>
+
+            <p>
+                Your guidance today helps shape the leaders
+                of tomorrow. We are truly grateful for
+                your time, effort and endless encouragement.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VALUES
+    ========================== -->
+
+    <section>
+
+        <div class="section-title">
+
+            <h2>What Teachers Give Us</h2>
+
+            <p>
+                More than just lessons.
+            </p>
+
+        </div>
+
+
+        <div class="values">
+
+            <div class="value">
+
+                <div class="value-icon">
+                    📚
+                </div>
+
+                <h3>Knowledge</h3>
+
+                <p>
+                    Helping us understand and explore
+                    new ideas.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    💡
+                </div>
+
+                <h3>Inspiration</h3>
+
+                <p>
+                    Encouraging us to think differently
+                    and dream bigger.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    🧭
+                </div>
+
+                <h3>Direction</h3>
+
+                <p>
+                    Helping us choose the right path
+                    in life.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-icon">
+                    🌟
+                </div>
+
+                <h3>Confidence</h3>
+
+                <p>
+                    Believing in us even when we
+                    doubt ourselves.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         THANK YOU
+    ========================== -->
+
+    <section class="thankyou" id="thankyou">
+
+        <h2>
+            Thank You, Teachers! 🎓
+        </h2>
+
+        <p>
+            Your words become our wisdom,
+            your guidance becomes our strength,
+            and your lessons become a part of
+            who we become.
+        </p>
+
+        <div class="heart">
+            💜
+        </div>
+
+        <h3>
+            Happy Teachers' Day!
+        </h3>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Our School</span> |
+            Teachers' Day Celebration
+        </p>
+
+        <p>
+            Made with ❤️ by Students
+        </p>
+
+    </footer>
+
+</body>
+</html>
